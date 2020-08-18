@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="3"/>
+    <TextView
+
+        android:text="Shah Koti Dhaba"
+        android:textSize="25dp"
+        android:id="@+id/head"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Customer Name :-"
+        android:textSize="20dp"
+        android:layout_below="@+id/head"
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/customer_name"
+        android:layout_width="247dp"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="35dp"
+        android:text="Phone Number:-"
+        android:hint="10 Digits Only"
+        android:textSize="20dp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="2dp"
+        android:ems="10"
+        android:digits="0123456789+"
+        android:inputType="phone"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/s1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone"
+        android:layout_marginTop="13dp"
+        android:text="Sabji Name :-"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/sabji"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone"
+        android:inputType="text"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/cs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sabji"
+        android:layout_marginTop="15dp"
+        android:text="Cost of Sabji :-"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/costsabji"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sabji"
+        android:inputType="number"
+        android:layout_alignRight="@+id/cs"
+        android:layout_alignBottom="@+id/sabji"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="-253dp"
+        android:layout_marginBottom="-53dp" />
+
+    <TextView
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cs"
+        android:layout_marginTop="23dp"
+        android:text="Number of Roti :-"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/num_roti"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cs"
+        android:inputType="number"
+        android:layout_alignRight="@+id/r1"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="-264dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r1"
+        android:layout_marginTop="28dp"
+        android:id="@+id/cr"
+        android:textSize="15dp"
+        android:text="Total Cost of Roties :-" />
+
+    <EditText
+        android:layout_width="322dp"
+        android:id="@+id/costroti"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/num_roti"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@+id/cr" />
+
+    <TextView
+        android:id="@+id/extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/costroti"
+        android:layout_marginTop="18dp"
+        android:text="Extra things cost(butter/drinks) :-" />
+
+    <EditText
+        android:id="@+id/extracost"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@+id/cr"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/extra" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/extracost"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="31dp"
+        android:layout_toRightOf="@+id/show_data"
+        android:text="Total Cost :-" />
+
+    <TextView
+        android:id="@+id/total_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/extracost"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="29dp"
+        android:layout_toRightOf="@+id/total"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/add_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/extra"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/show_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/extra"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="48dp"
+        android:layout_toRightOf="@+id/add_data"
+        android:text="Show Data" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_data"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-1dp"
+        android:text="Update" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_data"
+        android:layout_marginLeft="19dp"
+        android:id="@+id/delete"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/update"
+        android:text="Delete"></Button>
+
+    <EditText
+        android:id="@+id/idfor"
+        android:layout_width="175dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/add_data"
+        android:layout_marginStart="123dp"
+        android:layout_marginLeft="87dp"
+        android:layout_marginTop="-29dp"
+        android:layout_toEndOf="@+id/update"
+        android:hint="ID to delete/update"
+        android:textColor="#000" />
+
+</RelativeLayout>
